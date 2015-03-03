@@ -27,7 +27,6 @@ import android.widget.EditText;
  */
 public class EmojiconEditText extends EditText {
     private int mEmojiconSize;
-    private int mEmojiconAlignment;
     private int mEmojiconTextSize;
     private boolean mUseSystemDefault = false;
 
@@ -72,7 +71,7 @@ public class EmojiconEditText extends EditText {
     }
 
     private void updateText() {
-        EmojiconHandler.addEmojis(getContext(), getText(), mEmojiconSize, mEmojiconAlignment, mEmojiconTextSize, mUseSystemDefault);
+        EmojiconHandler.addEmojis(getContext(), getText(), mEmojiconSize, mEmojiconTextSize, mUseSystemDefault);
     }
 
     /**
