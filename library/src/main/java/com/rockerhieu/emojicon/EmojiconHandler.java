@@ -26,7 +26,7 @@ public final class EmojiconHandler {
     private EmojiconHandler() {
     }
 
-    private static final SparseIntArray sEmojisMap = new SparseIntArray(846);
+    private static final SparseIntArray sEmojisMap = new SparseIntArray(847);
     private static final SparseIntArray sSoftbanksMap = new SparseIntArray(471);
 
     static {
@@ -884,6 +884,7 @@ public final class EmojiconHandler {
         sEmojisMap.put(0x1f537, R.drawable.emoji_1f537);
         sEmojisMap.put(0x1f538, R.drawable.emoji_1f538);
         sEmojisMap.put(0x1f539, R.drawable.emoji_1f539);
+//        sEmojisMap.put(0x1f53a, R.drawable.emoji_india);
 
 
         sSoftbanksMap.put(0xe001, R.drawable.emoji_1f466);
@@ -1496,35 +1497,278 @@ public final class EmojiconHandler {
                     } else {
                         int followSkip = Character.charCount(followUnicode);
                         switch (unicode) {
-                            case 0x1f1ef:
-                                icon = (followUnicode == 0x1f1f5) ? R.drawable.emoji_1f1ef_1f1f5 : 0;
+
+                            case 0x1f1e6:           //A
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f7:
+                                        icon = R.drawable.emoji_argentina1f1f7;
+                                        break;
+                                    case 0x1f1fa:
+                                        icon = R.drawable.emoji_australia;
+                                        break;
+                                    case 0x1f1f9:
+                                        icon = R.drawable.emoji_austria;
+                                        break;
+                                    case 0x1f1ea:
+                                        icon = R.drawable.emoji_uae;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
                                 break;
-                            case 0x1f1fa:
-                                icon = (followUnicode == 0x1f1f8) ? R.drawable.emoji_1f1fa_1f1f8 : 0;
+                            case 0x1f1e7:           //B
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1ea:
+                                        icon = R.drawable.emoji_belgium;
+                                        break;
+                                    case 0x1f1f7:
+                                        icon = R.drawable.emoji_brazil;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
                                 break;
-                            case 0x1f1eb:
-                                icon = (followUnicode == 0x1f1f7) ? R.drawable.emoji_1f1eb_1f1f7 : 0;
+                            case 0x1f1e8:           //C
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f3:
+                                        icon =  R.drawable.emoji_1f1e8_1f1f3;
+                                        break;
+                                    case 0x1f1e6:
+                                        icon = R.drawable.emoji_canada;
+                                        break;
+                                    case 0x1f1ed:
+                                        icon = R.drawable.emoji_switzerland;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
                                 break;
-                            case 0x1f1e9:
-                                icon = (followUnicode == 0x1f1ea) ? R.drawable.emoji_1f1e9_1f1ea : 0;
+                            case 0x1f1e9:           //D
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1ea:
+                                        icon = R.drawable.emoji_1f1e9_1f1ea;
+                                        break;
+                                    case 0x1f1f0:
+                                        icon = R.drawable.emoji_denmark;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
                                 break;
-                            case 0x1f1ee:
-                                icon = (followUnicode == 0x1f1f9) ? R.drawable.emoji_1f1ee_1f1f9 : 0;
+                            case 0x1f1ea:           //E
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f8:
+                                    icon = R.drawable.emoji_1f1ea_1f1f8;
+                                    break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
                                 break;
-                            case 0x1f1ec:
-                                icon = (followUnicode == 0x1f1e7) ? R.drawable.emoji_1f1ec_1f1e7 : 0;
+
+                            case 0x1f1eb:           //F
+                                switch (followUnicode)
+                                {
+
+                                    case 0x1f1f7:
+                                        icon = R.drawable.emoji_1f1eb_1f1f7;
+                                        break;
+                                    case 0x1f1ee:
+                                        icon = R.drawable.emoji_finland;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
                                 break;
-                            case 0x1f1ea:
-                                icon = (followUnicode == 0x1f1f8) ? R.drawable.emoji_1f1ea_1f1f8 : 0;
+
+                            case 0x1f1ec:           //G
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1e7:
+                                        icon = R.drawable.emoji_1f1ec_1f1e7;
+                                        break;
+                                    case 0x1f1f7:
+                                        icon = R.drawable.emoji_greece;
+                                         break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
                                 break;
-                            case 0x1f1f7:
-                                icon = (followUnicode == 0x1f1fa) ? R.drawable.emoji_1f1f7_1f1fa : 0;
+                            case 0x1f1ed:           //H
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f0:
+                                        icon = R.drawable.emoji_hongkong;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
                                 break;
-                            case 0x1f1e8:
-                                icon = (followUnicode == 0x1f1f3) ? R.drawable.emoji_1f1e8_1f1f3 : 0;
+                            case 0x1f1ee:           //I
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f9:
+                                        icon = R.drawable.emoji_1f1ee_1f1f9;
+                                        break;
+                                    case 0x1f1f3:
+                                        icon = R.drawable.emoji_india;
+                                        break;
+                                    case 0x1f1e9:
+                                        icon = R.drawable.emoji_indonesia;
+                                        break;
+                                    case 0x1f1ea:
+                                    icon = R.drawable.emoji_ireland;
+                                    break;
+                                    case 0x1f1f1:
+                                    icon = R.drawable.emoji_israel;
+                                    break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
                                 break;
-                            case 0x1f1f0:
-                                icon = (followUnicode == 0x1f1f7) ? R.drawable.emoji_1f1f0_1f1f7 : 0;
+                            case 0x1f1ef:           //J
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f5:
+                                        icon = R.drawable.emoji_1f1ef_1f1f5;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
+                                break;
+                            case 0x1f1f0:           //K
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f7:
+                                        icon = R.drawable.emoji_1f1f0_1f1f7;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
+                                break;
+                            case 0x1f1f2:           //M
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1fe:
+                                        icon = R.drawable.emoji_malaysia;
+                                        break;
+                                    case 0x1f1fd:
+                                        icon = R.drawable.emoji_mexico;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
+                                break;
+                            case 0x1f1f3:           //N
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f1:
+                                        icon = R.drawable.emoji_netherlands;
+                                        break;
+                                    case 0x1f1ff:
+                                        icon = R.drawable.emoji_newzealand;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
+                                break;
+                            case 0x1f1f5:           //P
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f0:
+                                        icon = R.drawable.emoji_pakistan;
+                                        break;
+                                    case 0x1f1f9:
+                                        icon = R.drawable.emoji_portugal;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
+                                break;
+                            case 0x1f1f7:           //R
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1fa:
+                                    icon = R.drawable.emoji_1f1f7_1f1fa;
+                                    break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
+                                break;
+                            case 0x1f1f8:           //S
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1e6:
+                                        icon = R.drawable.emoji_saudiarabia;
+                                        break;
+                                    case 0x1f1ec:
+                                        icon = R.drawable.emoji_singapore;
+                                        break;
+                                    case 0x1f1ea:
+                                        icon = R.drawable.emoji_sweden;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
+                                break;
+                            case 0x1f1f9:           //T
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f7:
+                                        icon = R.drawable.emoji_turkey;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
+                                break;
+                            case 0x1f1fa:           //U
+                                switch (followUnicode)
+                                {
+                                    case 0x1f1f8:
+                                        icon = R.drawable.emoji_1f1fa_1f1f8;
+                                        break;
+                                    default:
+                                        icon = 0;
+                                        followSkip = 0;
+                                        break;
+                                }
                                 break;
                             default:
                                 followSkip = 0;
