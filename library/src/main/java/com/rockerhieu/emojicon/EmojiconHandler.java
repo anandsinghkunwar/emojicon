@@ -1378,9 +1378,11 @@ public final class EmojiconHandler {
      * @param context
      * @param text
      * @param emojiSize
+     * @param emojiAlignment
+     * @param textSize
      */
-    public static void addEmojis(Context context, Spannable text, int emojiSize, int textSize) {
-        addEmojis(context, text, emojiSize, textSize, 0, -1, false);
+    public static void addEmojis(Context context, Spannable text, int emojiSize, int emojiAlignment, int textSize) {
+        addEmojis(context, text, emojiSize, emojiAlignment, textSize, 0, -1, false);
     }
 
     /**
@@ -1389,11 +1391,13 @@ public final class EmojiconHandler {
      * @param context
      * @param text
      * @param emojiSize
+     * @param emojiAlignment
+     * @param textSize
      * @param index
      * @param length
      */
-    public static void addEmojis(Context context, Spannable text, int emojiSize, int textSize, int index, int length) {
-        addEmojis(context, text, emojiSize, textSize, index, length, false);
+    public static void addEmojis(Context context, Spannable text, int emojiSize, int emojiAlignment, int textSize, int index, int length) {
+        addEmojis(context, text, emojiSize, emojiAlignment, textSize, index, length, false);
     }
 
     /**
@@ -1402,10 +1406,12 @@ public final class EmojiconHandler {
      * @param context
      * @param text
      * @param emojiSize
+     * @param emojiAlignment
+     * @param textSize
      * @param useSystemDefault
      */
-    public static void addEmojis(Context context, Spannable text, int emojiSize, int textSize, boolean useSystemDefault) {
-        addEmojis(context, text, emojiSize, textSize, 0, -1, useSystemDefault);
+    public static void addEmojis(Context context, Spannable text, int emojiSize, int emojiAlignment, int textSize, boolean useSystemDefault) {
+        addEmojis(context, text, emojiSize, emojiAlignment, textSize, 0, -1, useSystemDefault);
     }
 
     /**
@@ -1414,11 +1420,13 @@ public final class EmojiconHandler {
      * @param context
      * @param text
      * @param emojiSize
+     * @param emojiAlignment
+     * @param textSize
      * @param index
      * @param length
      * @param useSystemDefault
      */
-    public static void addEmojis(Context context, Spannable text, int emojiSize, int textSize, int index, int length, boolean useSystemDefault) {
+    public static void addEmojis(Context context, Spannable text, int emojiSize, int emojiAlignment, int textSize, int index, int length, boolean useSystemDefault) {
         if (useSystemDefault) {
             return;
         }
@@ -1780,7 +1788,7 @@ public final class EmojiconHandler {
             }
 
             if (icon > 0) {
-                text.setSpan(new EmojiconSpan(context, icon, emojiSize, textSize), i, i + skip, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                text.setSpan(new EmojiconSpan(context, icon, emojiSize, emojiAlignment, textSize), i, i + skip, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             }
         }
     }
